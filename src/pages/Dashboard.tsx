@@ -118,7 +118,7 @@ export const Dashboard: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col">
           <h2 className="text-base font-semibold text-gray-900 mb-6">Resources by Status</h2>
-          <div className="flex-1 h-64 relative">
+          <div className="w-full h-[240px] relative">
             {loading ? (
               <div className="absolute inset-0 flex flex-col items-center justify-center">
                 <Skeleton className="w-[150px] h-[150px] rounded-full border-[20px] border-gray-50 bg-transparent mb-6" />
@@ -159,14 +159,14 @@ export const Dashboard: React.FC = () => {
                 </PieChart>
               </ResponsiveContainer>
             ) : (
-              <div className="w-full h-full flex items-center justify-center text-sm text-gray-400">No data available</div>
+              <div className="w-full h-full flex items-center justify-center text-sm text-gray-500">No resource data available</div>
             )}
           </div>
         </div>
 
         <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm flex flex-col">
           <h2 className="text-base font-semibold text-gray-900 mb-6">Resources by Department</h2>
-          <div className="flex-1 h-64 relative">
+          <div className="w-full h-[240px] relative">
             {loading ? (
               <div className="absolute inset-0 flex items-end justify-around pb-6 pt-4 px-2">
                 <Skeleton className="w-10 h-full max-h-[80%] rounded-t" />
@@ -189,7 +189,7 @@ export const Dashboard: React.FC = () => {
                 </BarChart>
               </ResponsiveContainer>
             ) : (
-              <div className="w-full h-full flex items-center justify-center text-sm text-gray-400">No data available</div>
+              <div className="w-full h-full flex items-center justify-center text-sm text-gray-500">No resource data available</div>
             )}
           </div>
         </div>
