@@ -313,20 +313,22 @@ export const Resources: React.FC = () => {
                       {formatDate(r.createdAt)}
                     </td>
                     <td className="px-6 py-3 whitespace-nowrap text-right text-sm font-medium">
-                      <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity">
-                          <Can permission="resource.edit">
-                            <button 
-                              className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" 
-                              title="Edit"
-                              onClick={() => setEditTarget(r)}
-                            >
-                              <Edit2 size={16} />
-                            </button>
-                          </Can>
+                      <div className="flex items-center justify-end gap-2">
+                        <Can permission="resource.edit">
+                          <button 
+                            className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                            title="Edit"
+                            aria-label="Edit resource"
+                            onClick={() => setEditTarget(r)}
+                          >
+                            <Edit2 size={16} />
+                          </button>
+                        </Can>
                         <Can permission="resource.delete">
                           <button 
-                            className="p-1.5 text-gray-400 hover:text-red-600 rounded focus:outline-none focus:ring-2 focus:ring-red-500" 
+                            className="p-1.5 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors focus:outline-none focus:ring-2 focus:ring-red-500" 
                             title="Delete"
+                            aria-label="Delete resource"
                             onClick={() => setDeleteTarget(r)}
                           >
                             <Trash2 size={16} />
